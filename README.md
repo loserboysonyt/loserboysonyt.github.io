@@ -4,3 +4,13 @@ Retro Bowl 2 is an American style football game created by New Star Games. Are y
 # Subscribe To **Loser Boys** On youtube for Future updates and leaks Link Below:
 
 https://www.youtube.com/channel/UCSjd2xkw3oG66hCDH9BZoWQ
+
+# Future Updates 
+#1 More Uniforms/Helments
+
+#2 More Fields/Stadiums
+
+#3 Emotes
+
+#4 Levels/Tiers
+
