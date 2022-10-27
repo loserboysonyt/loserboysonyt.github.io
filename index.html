@@ -27,6 +27,28 @@
 
         <style>
             body {
+		    <script type="text/javascript">
+   window.SDK_OPTIONS = {
+      gameId: "your_game_id_here",
+      onEvent: function (a) {
+         switch (a.name) {
+            case "SDK_GAME_PAUSE":
+               // pause game logic / mute audio
+               break;
+            case "SDK_GAME_START":
+               // advertisement done, resume game logic and unmute audio
+               break;
+            case "SDK_READY":
+               // when sdk is ready
+               break;
+         }
+      }
+   };
+(function (a, b, c) {
+   var d = a.getElementsByTagName(b)[0];
+   a.getElementById(c) || (a = a.createElement(b), a.id = c, a.src = "https://api.gamemonetize.com/sdk.js", d.parentNode.insertBefore(a, d))
+})(document, "script", "gamemonetize-sdk"); 
+</script>
               background: #0;
               color:#fffff0;
               margin: 0px;
