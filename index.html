@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Road to Glory</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="app-container">
@@ -19,12 +19,18 @@
         <li id="menu-practice">Practice</li>
       </ul>
     </aside>
+
     <main class="main-panel" id="mainPanel">
-      <!-- Dynamic content goes here -->
       <h1>Welcome, QB</h1>
       <p>Select a menu option to start your season.</p>
     </main>
+
+    <div id="gameContainer" style="display: none;">
+      <canvas id="gameCanvas" width="800" height="600"></canvas>
+    </div>
   </div>
+
   <script src="menu.js"></script>
+  <script src="html5game/RetroBowl.js"></script>
 </body>
 </html>
