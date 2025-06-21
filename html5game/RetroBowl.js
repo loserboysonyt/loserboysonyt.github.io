@@ -1966,22 +1966,3 @@ _BA1);};{_Dt(45418912);_ft._LA1[_Gt(0)]=min(_JA1(),_CA1);};_RX(_ft._SX,_ft._KA1[
 false)==0){_UA1=0;}switch(_UA1){case 0:{if(yyfnotequal(_bi._Vy,14)){{_bi._VA1=_xH(_bi._VA1,1,0.05);break;}};}default :{_bi._VA1=_xH(_bi._VA1,_PA1,0.025);if(yyGetBool(_bi._T11)){_bi._VA1=1};break;}};var _WA1=_Ai(_jj(_bi,_ci,64)._Gn,"op_zoom");var _XA1=-1;if(yyCompareVal(_WA1,0,g_GMLMathEpsilon,false)==0||yyCompareVal(_WA1,"false",g_GMLMathEpsilon,false)==0){_XA1=0;}switch(_XA1){case 0:{_bi._VA1=1;break;}};_YA1(_ft._ZA1[_7v(0,_ft._ZA1)],yyftime(960,_Ri(_bi._VA1)),yyftime(540,_Ri(_bi._VA1)));var __A1=_0B1(_ft._ZA1[_7v(0,
 _ft._ZA1)]);var _1B1=_2B1(_ft._ZA1[_7v(0,_ft._ZA1)]);var _3B1=yyftime(_Ri(__A1),0.5);var _4B1=yyftime(_Ri(_1B1),0.5);var _Ce1=1300;var _De1=300;var _5B1=0.05;var _m31=global._d01;if(yyGetBool(_6L(_m31))){{_Ce1=_jj(_bi,_ci,_m31).x;_De1=yyfplus(300,_Ri(yyftime(_Ri(yyfminus(_Ri(_jj(_bi,_ci,_m31).y),300)),0.5)));if(yyGetBool(_b01(_bi,_ci))){_De1=300};if(yyGetBool(_6L(_jj(_bi,_ci,_m31)._X_))){_Ce1=_jj(_bi,_ci,_jj(_bi,_ci,_m31)._X_).x};_3B1=yyftime(_Ri(__A1),_Ri(yyfminus(0.5,_Ri(yyftime(0.15,_Ri(_bi._501))))));
 if(yyGetBool(_bi._T11
-// ===== MAX CREDITS PATCH =====
-// Paste this at the VERY END of the file
-
-// Method 1: Direct override (best for most games)
-if (typeof _crd !== 'undefined') _crd = 999999;
-if (typeof credits !== 'undefined') credits = 999999;
-if (typeof coach_credit !== 'undefined') coach_credit = 999999;
-
-// Method 2: Credit gain multiplier (if earned dynamically)
-const originalEarn = earnCredits || function(){};
-earnCredits = function(amount) {
-  originalEarn.call(this, amount * 1000);
-};
-
-// Method 3: Spending blocker
-const originalSpend = spendCredits || function(){};
-spendCredits = function(amount) {
-  return true; // Always allows spending without deduction
-};
